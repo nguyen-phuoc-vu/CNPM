@@ -1,0 +1,42 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content %}
+<br>
+<img src="{{ url_for('static', filename='images/wall.jpg') }}" width="100%" height="340"/>
+<br>
+<br>
+<h1 class="subject">CHÀO MỪNG CÁC BẠN ĐẾN VỚI NHÀ SÁCH eBOOK</h1>
+
+
+{% if pages > 1 %}
+<ul class="pagination">
+    {% for idx in range(1, pages+1) %}
+  <li class="page-item"><a class="page-link" href="{{ url_for('home', page=idx) }}">{{ idx }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div class="row">
+    {% if products %}
+    {% for p in products %}
+    <div class="col-md-3 col-xs-12" style="padding:10px">
+        <div class="card" style="...">
+          <img class="card-img-top" src="{{ url_for('static', filename=p.image) }}" width="300" alt="{{ p.name }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ p.name }}</h4>
+            <p class="card-text">{{ "{:,.1f}".format(p.price) }} VND</p>
+            <a href="#" class="btn btn-primary" onclick="addToCart({{ p.id }}, '{{ p.name }}', {{ p.price }})">Đặt hàng</a>
+            <a href="{{ url_for('product_detail', product_id=p.id) }}" class="btn btn-dark">Xem chi tiết</a>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p><i>Không có sản phẩm nào</i></p>
+{% endif %}
+<br>
+
+{% endblock %}
+

@@ -1,0 +1,29 @@
+[{
+ "id": 1,
+ "name": "Cho toi xin mot ve di tuoi tho",
+ "description": "Nguyen Nhat Anh, Bia cung, Tai ban 2018",
+ "price": 140000,
+ "image": "images/ctx1vdtt.jpg",
+ "category_id": 1
+}, {
+ "id": 2,
+ "name": "Toi thay hoa vang tren co xanh",
+ "description": "Nguyen Nhat Anh, Bia cung, Ban in moi 2018",
+ "price": 125000,
+ "image": "images/tthvtcx.jpg",
+ "category_id": 1
+}, {
+ "id": 3,
+ "name": "Co gai den tu hom qua",
+ "description": "Nguyen Nhat Anh, Bia mem",
+ "price": 80000,
+ "image": "images/cgdthq.jpg",
+ "category_id": 1
+}, {
+ "id": 4,
+ "name": "Su im lang cua bay cuu",
+ "description": "Thomas Harris, Bia mem, Tai ban 2019",
+ "price": 115000,
+ "image": "images/silcbc.jpg",
+ "category_id": 2
+}]
